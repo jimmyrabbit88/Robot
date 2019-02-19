@@ -13,6 +13,25 @@ public class Robot {
         setAge(0);
     }
 
+    public int recordEngineer(String name, int phone_no){
+
+        Engineer creator = new Engineer(name, phone_no);
+        return creator.getContactNo();
+    }
+
+
+
+    public double recordOwnerAndMonthlyPayments(String name) {
+
+        double cost = checkCost();
+        System.out.println ( name + cost);
+        Owner myOwner = new Owner(name, cost);
+        return myOwner.getMonthlyPayments();
+    }
+
+
+
+
     public String getName() {
         return name;
     }
