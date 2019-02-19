@@ -17,6 +17,19 @@ public class Robot {
         return name;
     }
 
+    public void sendAgeMsg() throws IllegalArgumentException {
+        try {
+            if (age > 25) {
+                throw new IllegalArgumentException("Age too old");
+            }
+
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error " + e.getMessage());
+        }
+        System.out.println( "Age ok");
+    }
+
+
     public void setName(String name) {
         if(name.isEmpty()){
             throw new IllegalArgumentException();
